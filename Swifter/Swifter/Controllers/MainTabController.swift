@@ -24,6 +24,9 @@ class MainTabController: UITabBarController {
     // MARK: - Helpers
     
     func configureViewControllers() {
+        UITabBar.appearance().barTintColor = UIColor.black
+        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().tintColor = .orange
         
         let feed = FeedController()
         let nav1 = templateNavigationController(image: UIImage(named: "home_unselected"), rootViewController: feed)
@@ -36,7 +39,7 @@ class MainTabController: UITabBarController {
         
         let conversations = ConversationsController()
         let nav4 = templateNavigationController(image: UIImage(named: "ic_mail_outline_white_2x-1"), rootViewController: conversations)
-        
+                
         viewControllers = [nav1, nav2, nav3, nav4]
     }
     
