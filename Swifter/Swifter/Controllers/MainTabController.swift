@@ -25,19 +25,33 @@ class MainTabController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        configureViewControllers()
-        configureUI()
-        
+//        logUserOut()
+        view.backgroundColor = .swiftOrange
+        authenticateUserAndConfigureUI()
+
     }
     
     // MARK: - API
     
     func authenticateUserAndConfigureUI() {
         if Auth.auth().currentUser == nil {
-            
+            DispatchQueue.main.async {
+                let nav = UINavigationController(rootViewController: LoginController())
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
+            }
         } else {
+            configureViewControllers()
+            configureUI()
             
+        }
+    }
+    
+    func logUserOut() {
+        do {
+            try Auth.auth().signOut()
+        } catch let error {
+            print("DEBUG: Failed to sign out with error \(error.localizedDescription)")
         }
     }
     
@@ -57,9 +71,8 @@ class MainTabController: UITabBarController {
     }
     
     func configureViewControllers() {
-        UITabBar.appearance().barTintColor = UIColor.black
         UITabBar.appearance().isTranslucent = false
-        UITabBar.appearance().tintColor = .swiftOrange
+        UITabBar.appearance().tintColor = .white
         
         let feed = FeedController()
         let nav1 = templateNavigationController(image: UIImage(named: "home_unselected"), rootViewController: feed)
