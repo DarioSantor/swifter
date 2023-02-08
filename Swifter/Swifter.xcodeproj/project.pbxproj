@@ -32,6 +32,7 @@
 		F2D2B7B72993B8B300A4F160 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2B7B62993B8B300A4F160 /* AuthService.swift */; };
 		F2D2B8022994141700A4F160 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2B8012994141700A4F160 /* UserService.swift */; };
 		F2D2B804299418AD00A4F160 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2B803299418AD00A4F160 /* User.swift */; };
+		F2D2B80729941D8F00A4F160 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = F2D2B80629941D8F00A4F160 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +56,7 @@
 		F2D2B7B42993A7D300A4F160 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F2D2B7B62993B8B300A4F160 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F2D2B8012994141700A4F160 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
-		F2D2B803299418AD00A4F160 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Swifter/API/User.swift; sourceTree = SOURCE_ROOT; };
+		F2D2B803299418AD00A4F160 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = Swifter/Model/User.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 				F2D2B78F2992CA1900A4F160 /* FirebaseAuth in Frameworks */,
 				F2D2B7972992CA1900A4F160 /* FirebaseDatabaseSwift in Frameworks */,
 				F2D2B79F2992CA1A00A4F160 /* FirebaseFirestoreSwift in Frameworks */,
+				F2D2B80729941D8F00A4F160 /* SDWebImage in Frameworks */,
 				F2D2B7952992CA1900A4F160 /* FirebaseDatabase in Frameworks */,
 				F2D2B79B2992CA1900A4F160 /* FirebaseFirestore in Frameworks */,
 				F2D2B7B12992CA1B00A4F160 /* FirebaseStorage in Frameworks */,
@@ -197,6 +199,7 @@
 				F2D2B79A2992CA1900A4F160 /* FirebaseFirestore */,
 				F2D2B79E2992CA1A00A4F160 /* FirebaseFirestoreSwift */,
 				F2D2B7B02992CA1B00A4F160 /* FirebaseStorage */,
+				F2D2B80629941D8F00A4F160 /* SDWebImage */,
 			);
 			productName = Swifter;
 			productReference = F2D2B75329925FF200A4F160 /* Swifter.app */;
@@ -228,6 +231,7 @@
 			mainGroup = F2D2B74A29925FF100A4F160;
 			packageReferences = (
 				F2D2B7852992CA1900A4F160 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F2D2B80529941D8F00A4F160 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = F2D2B75429925FF200A4F160 /* Products */;
 			projectDirPath = "";
@@ -499,6 +503,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		F2D2B80529941D8F00A4F160 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -531,6 +543,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F2D2B7852992CA1900A4F160 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		F2D2B80629941D8F00A4F160 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2D2B80529941D8F00A4F160 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
