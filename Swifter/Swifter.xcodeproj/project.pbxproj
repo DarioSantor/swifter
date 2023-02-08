@@ -45,6 +45,8 @@
 		F2D2B7AF2992CA1B00A4F160 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F2D2B7AE2992CA1B00A4F160 /* FirebaseRemoteConfigSwift */; };
 		F2D2B7B12992CA1B00A4F160 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F2D2B7B02992CA1B00A4F160 /* FirebaseStorage */; };
 		F2D2B7B32992CA1C00A4F160 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F2D2B7B22992CA1C00A4F160 /* FirebaseStorageCombine-Community */; };
+		F2D2B7B52993A7D300A4F160 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2B7B42993A7D300A4F160 /* Constants.swift */; };
+		F2D2B7B72993B8B300A4F160 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2B7B62993B8B300A4F160 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		F2D2B77F2992934C00A4F160 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		F2D2B78129929DD400A4F160 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		F2D2B7832992C6F900A4F160 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F2D2B7B42993A7D300A4F160 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F2D2B7B62993B8B300A4F160 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 			children = (
 				F2D2B77A2992792B00A4F160 /* Extensions.swift */,
 				F2D2B78129929DD400A4F160 /* Utilities.swift */,
+				F2D2B7B42993A7D300A4F160 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 		F2D2B76B2992613300A4F160 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				F2D2B7B62993B8B300A4F160 /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -302,11 +308,13 @@
 				F2D2B75729925FF200A4F160 /* AppDelegate.swift in Sources */,
 				F2D2B77B2992792B00A4F160 /* Extensions.swift in Sources */,
 				F2D2B77E2992926D00A4F160 /* LoginController.swift in Sources */,
+				F2D2B7B72993B8B300A4F160 /* AuthService.swift in Sources */,
 				F2D2B775299264D300A4F160 /* ExploreController.swift in Sources */,
 				F2D2B75929925FF200A4F160 /* SceneDelegate.swift in Sources */,
 				F2D2B7712992626900A4F160 /* MainTabController.swift in Sources */,
 				F2D2B7802992934C00A4F160 /* RegistrationController.swift in Sources */,
 				F2D2B7732992643400A4F160 /* FeedController.swift in Sources */,
+				F2D2B7B52993A7D300A4F160 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
