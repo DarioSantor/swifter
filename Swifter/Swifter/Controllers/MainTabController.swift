@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainTabController: UITabBarController {
     
@@ -28,6 +29,16 @@ class MainTabController: UITabBarController {
         configureViewControllers()
         configureUI()
         
+    }
+    
+    // MARK: - API
+    
+    func authenticateUserAndConfigureUI() {
+        if Auth.auth().currentUser == nil {
+            
+        } else {
+            
+        }
     }
     
     // MARK: - Selectors
